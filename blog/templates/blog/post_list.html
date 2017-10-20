@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kim Blogs</title>
+</head>
+<body>
+	<h1>My Django Blog</h1>
+	{% for post in posts %}
+	<div> 
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>created: {{ post.created_date }}</p>
+	</div>
+	{% endfor %}
+</body>
+</html>
