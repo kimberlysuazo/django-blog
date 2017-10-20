@@ -1,25 +1,11 @@
-{% load staticfiles %}
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
-	<link href="https://fonts.googleapis.com/css?family=Pacifico|Source+Sans+Pro" rel="stylesheet">
-	<title>Kim Blogs</title>
-</head>
-<body>
-	<header>
-		<h1>My Django Blog</h1>
-	</header>
-	<div class="article-list">
-		{% for post in posts %}
-		<article> 
+{% extends 'blog/base.html' %}
+
+{% block content %}
+	{% for post in posts %}
+		<section> 
 	        <h2><a href="">{{ post.title }}</a></h2>
 	        <p>created: {{ post.created_date }}</p>
 	        <hr>
-		</article>
-		{% endfor %}
-	</div>
-</body>
-</html>
+		</section>
+	{% endfor %}
+{% endblock %}
