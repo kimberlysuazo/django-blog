@@ -12,6 +12,7 @@
 	<header>
 		<h1><a href="/">My Django Blog</a></h1>
 	</header>
+	<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span> New Post</a>
 	<div class="article-container">
 		{% block content %}
 		{% endblock %}
